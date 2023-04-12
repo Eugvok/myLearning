@@ -1,0 +1,27 @@
+@import "fonts.scss";
+@import "reset.scss";
+@import "utilits.scss";
+//++++++++++++++++++
+body {
+   font-family: $fontfamily;
+}
+
+.wrapper {
+   min-height: 100%;
+   max-width: $maw + px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   margin: 0px auto;
+}
+
+//Header
+@import "header.scss";
+//main
+.main {
+   flex: 1 1 auto;
+}
+//FOOTER
+
+// @import "footer.scss";
+// @import "responsive.scss";

@@ -1,0 +1,10 @@
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git checkout -b <branch name>
+git remote add origin <repositary link>
+git push -u origin main
+git checkout <branch name>
+git log --oneline --decorate // all brunches => press q to quit
+br2 -> br1: git checkout br1; git merge br2;
