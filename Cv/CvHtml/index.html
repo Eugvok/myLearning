@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/src/img/icons/pngwing.com.png" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+   <title>CV</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <!--! Header  -->
+      <header class="header">
+         <div class="header__container">
+            <a href="#" class="header__logo">
+               <h2>r&nbsp;&nbsp;&nbsp;&nbsp;s<br>sch
+                  <l>ool
+                     <l><span>-cv</span></h2>
+            </a>
+            <div class="header__menu">
+               <nav class="menu__body">
+                  <ui class="menu__list">
+                     <li class="menu-item"><a href="#contact">Contact information</a></li>
+                     <li class="menu-item"><a href="#about-me">About me</a></li>
+                     <li class="menu-item"><a href="#my-skills">Skills</a></li>
+                     <li class="menu-item"><a href="#my-code">Code example</a></li>
+                     <li class="menu-item"><a href="#works">My works</a></li>
+                     <li class="menu-item"><a href="#my-education">Education</a></li>
+                  </ui>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <!--! Main -->
+      <main class="main">
+         <div class="iam">
+            <h1>Eugene Gladkov</h1>
+            <img src="https://avatars.githubusercontent.com/u/65811426?s=400&u=c333e47fe691093211222261ea6b897c7d2598b2&v=4" alt="man's face">
+         </div>
+         <h2>Mastering frontend</h2>
+         <h3>Contact information:</h3>
+         <div id="contact" class="contacts">
+            <ul class="contacts__list">
+               <li class="contacts__item"><span>E-mail: </span>Eugvok85@gmail.com</li>
+               <li class="contacts__item"><span>Telegram: </span>@Eugvok</li>
+               <li class="contacts__item">
+                  <a target="_blank" href="https://www.linkedin.com/in/eugvok/">
+                     <h4><span>Link</span>ed-in</h4>
+                  </a>
+               </li>
+               <li class="contacts__item"><span>Discord rs-school: </span>Eugene (@Eugvok)</li>
+            </ul>
+         </div>
+         <!--? About me -->
+         <div id="about-me" class="about">
+            <h3>About me:</h3>
+            <p>Interested in web development. I expect to eventually master the full stack, but I see the frontend as the main direction of my development.</p>
+            <div id="about" class="about__list">
+               <ul class="about">
+                  <li class="about-item">stress resistance</li>
+                  <li class="about-item">negotiations</li>
+                  <li class="about-item">time management</li>
+                  <li class="about-item">teamwork</li>
+               </ul>
+            </div>
+            <p>I really like the possibility of remote work, which allows you to carry out professional growth depending on my talents, abilities and practice, not according to some other criteria + nice comunity.</p>
+            <h3>Skills: </h3>
+            <ul id="my-skills" class="skills__list">
+               <li class="skills-item">HTML</li>
+               <li class="skills-item">CSS/SCSS</li>
+               <li class="skills-item">JS (basics)</li>
+               <li class="skills-item">Git</li>
+               <li class="skills-item">Gulp (basics)</li>
+               <li class="skills-item">Figma</li>
+            </ul>
+         </div>
+         <!--? code example -->
+         <div id="my-code" class="code__example">
+            <h3>Code example:</h3>
+            <p>Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.</p>
+            <pre>
+					<code>
+                  function add(num1, num2) {
+                     let	arr0 = new Array(),	//исходный массив
+                         arrM = new Array(),  //модифицированный массив
+                         arrE = new Array();	//формируем выходной массив
+
+                  function numToArray(num) {
+                        let arr = Array.from(String(num));
+                        for (let i = 0; i < String(num).length; i++) {
+                        arr[i] = Number(arr[i]);
+                        }
+                     return arr;
+                     };
+
+                     let	arr1 = numToArray(num1),
+                           arr2 = numToArray(num2),
+                           c = arr1.length - arr2.length;
+
+                     if (c == 0) {
+                        for (let i = 0; i < arr1.length; i++) {
+                           arrE[i] = arr1[i] + arr2[i];
+                        }
+                     };
+
+                     if (c != 0) { //если массивы разной длины, добавляем пустые элементы массиву, который короче
+                        for (let k = 0; k < Math.abs(c); k++) {
+                           arr0[k] = 0;
+                        }
+                     };
+
+                     if (c > 0) {
+                        arrM = arr0.concat(arr2);
+                        for (let i = 0; i < arrM.length; i++) {
+                           arrE[i] = arr1[i] + arrM[i];
+                        };
+                     } else {
+                        arrM = arr0.concat(arr1);
+                        for (let i = 0; i < arrM.length; i++) {
+                           arrE[i] = arr2[i] + arrM[i];
+                        };
+                     };
+                  return Number(arrE.join(''));
+               }
+					</code>
+				</pre>
+            <a target="_blank" href="https://www.codewars.com/kata/526571aae218b8ee490006f4/train/javascript">Codewars</a>
+         </div>
+         <div id="works" class="my__works">
+            <h3>My works:</h3>
+            <a target="_blank" href="https://sergey962.github.io/Dolgodrudniy_VOS/"><img width="100px" src="src/img/sergey962.github.io_Dolgodrudniy_VOS_.png" alt="Dolgodrudniy_VOS"></a>
+         </div>
+         <!--? education -->
+         <div id="my-education" class="education">
+            <h3>Education:</h3>
+            <p>2003-2005 BMSTU mechanical engineering technologies (not completed)</p>
+            <h4>Courses:</h4>
+            <ul class="courses">
+               <li class="courses"><a href="">Web development for beginners: HTML & CSS</a></li>
+               <li class="courses"><a href="">JavaScript for beginners</a></li>
+            </ul>
+            <h4>English:</h4>
+            <p>
+               <a target="_blank" href="https://www.efset.org/quick-check/take-test/#set15-190/result"><img width="500px" src="src/img/myscore.jpg" alt=""></a>
+            </p>
+         </div>
+      </main>
+      <!--! Footer -->
+      <footer class="footer">
+         <div class="footer__container">
+            <a target="_blank" href="https://github.com/Eugvok" class="footer__git">
+               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="25px" alt="git icon">my Git
+            </a>
+            <h6>2022</h6>
+            <a target="_blank" href="https://rs.school/js/" target="_blank">
+               <img src="https://app.rs.school/static/images/logo-rsschool3.png" width="100px" alt="rs logo">
+            </a>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>
