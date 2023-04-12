@@ -1,0 +1,201 @@
+:root {
+	--black: hsl(0, 0%, 4%);
+	--darker: hsl(0, 0%, 21%);
+	--white: hsl(0, 0%, 96%);
+	--grey-lighter: hsl(0, 0%, 86%);
+	--blue: hsl(217, 71%, 53%);
+	--blue-darkest: hsl(204, 71%, 36%);
+	--cyan: hsl(204, 86%, 53%);
+	--transparent: hsl(0, 0%, 0%, 0%);
+}
+
+body {
+	margin: 0;
+	background-color: var(--grey-lighter);
+	color: var(--black);
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	user-select: none;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 0.5rem;
+}
+
+.accordion {
+	margin: 0 auto 2rem;
+	padding: 0 0.7rem;
+	color: var(--blue-darkest);
+}
+
+.accordion__element {
+	display: flex;
+	flex-direction: column;
+}
+
+.accordion__button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+	border: unset;
+	border-top: 0.1em solid var(--blue-darkest);
+	background-color: var(--transparent);
+	color: inherit;
+	font-size: 1.3rem;
+	cursor: inherit;
+	pointer-events: none;
+	transition: transform 0.3s ease-out, outline 0.3s ease-out, color 0.3s ease-out, border 0.3s ease-out;
+}
+
+.accordion__button-icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	opacity: 0;
+	fill: var(--blue);
+	transition: transform 0.3s ease-out, opacity 0.3s ease-in, fill 0.3s ease-in;
+}
+
+.accordion__content-inner {
+	padding: 1em;
+}
+
+.accordion__content-inner img {
+	margin: 0 auto;
+	opacity: 0;
+	transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+	transform: scale(0.1);
+}
+
+.accordion__content {
+	width: 80%;
+	margin: 0 auto;
+	color: var(--black);
+	transition: max-height 0.3s ease-out;
+}
+
+.accordion input[type="radio"] {
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+}
+
+.accordion label {
+	cursor: pointer;
+}
+
+/* ======================================
+	 $Accordion functional
+	 ====================================== */
+
+[data-accordion="content"] {
+	overflow: hidden;
+	max-height: 0;
+}
+
+[id^="cssAccordionToggle"]:checked~label [data-accordion="content"] {
+	max-height: 100%;
+}
+
+/* $Accordion visual state
+	 ====================================== */
+
+[id^="cssAccordionToggle"]:checked+label {
+	cursor: not-allowed;
+}
+
+[id^="cssAccordionToggle"]:checked~label .accordion__content img {
+	opacity: 1;
+	transform: scale(1);
+}
+
+[id^="cssAccordionToggle"]:checked+label .accordion__button {
+	border: 0.1em solid var(--darker);
+	color: var(--darker);
+	transform: scale(1.1);
+}
+
+[id^="cssAccordionToggle"]:checked+label .accordion__button .accordion__button-icon {
+	fill: var(--darker);
+	transform: rotate(180deg);
+}
+
+[id^="cssAccordionToggle"]:focus+label .accordion__button {
+	outline: 0.1em solid var(--cyan);
+	transform: scale(1.1);
+}
+
+[id^="cssAccordionToggle"]:focus+label .accordion__button .accordion__button-icon {
+	opacity: 1;
+}
+
+/* ======================================
+	 $Media
+	 ====================================== */
+
+@media (hover: hover) {
+	.accordion:hover {
+		color: var(--blue);
+	}
+
+	.accordion:hover .accordion__button-icon {
+		opacity: 1;
+	}
+
+	.accordion__element:hover .accordion__content {
+		height: auto;
+		max-height: max-content;
+	}
+
+	.accordion__element:hover .accordion__content img {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	.accordion__button:hover {
+		border: 0.1em solid var(--blue);
+		transform: scale(1.1);
+	}
+}
+
+@media (min-width: 320px) {
+
+	/* We dont need this breakpoint in the «mobile first» approach */
+	/* but terms of reference require: «Responsive design with three breakpoints...» */
+	.container {
+		padding: 0 0.6rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 80%;
+	}
+
+	.accordion {
+		padding: 0;
+	}
+
+	.accordion__button {
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.accordion__button {
+		font-size: 1.75rem;
+	}
+}

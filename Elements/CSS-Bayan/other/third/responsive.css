@@ -1,0 +1,57 @@
+/* Implement responsive design with three breakpoints. 
+Accordion is displayed correctly at 
+mobile 320x568, 
+tablet 820x1180, 
+desktop 1920×1080;
+ */
+
+/*For desktop 1920×1080*/
+@media only screen and (max-width: 1920px) {
+	body {
+		font-size: medium;
+		background-color: lightblue;
+	}
+
+	/* div {
+	  width: 100%;
+	  cursor: pointer;
+	} */
+	/* label,
+	input {
+	  cursor: pointer;
+	} */
+}
+
+@media (hover: hover) {
+
+	div:hover,
+	label:hover,
+	input:hover {
+		cursor: pointer;
+	}
+}
+
+/*For tablet 820x1180*/
+@media only screen and (max-width: 820px) {
+	body {
+		font-size: small;
+		background-color: lightgreen;
+	}
+
+	div {
+		width: 100%;
+	}
+}
+
+/*For mobile 320x568*/
+
+@media only screen and (max-width: 320px) {
+	body {
+		font-size: smaller;
+		background-color: lightgoldenrodyellow;
+	}
+
+	div {
+		width: 100%;
+	}
+}

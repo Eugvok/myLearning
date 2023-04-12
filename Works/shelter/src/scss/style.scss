@@ -1,0 +1,391 @@
+@import "fonts.scss";
+@import "reset.scss";
+@import "utilits.scss";
+//++++++++++++++++++
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: $fontfamily;
+   font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3,
+h4,
+h5 {
+   color: #545454;
+   letter-spacing: 0.06em;
+}
+
+h1 {
+   color: #f1cdb3;
+   font-size: 32.5px;
+   letter-spacing: 1.66px;
+   line-height: 35.2px;
+   transition: all 0.3s ease 0s;
+   &:hover {
+      color: #ffffff;
+   }
+}
+h2 {
+   font-size: 44px;
+   line-height: 57px;
+   color: #ffffff;
+}
+h3 {
+   font-size: 35px;
+   line-height: 45px;
+}
+
+h4 {
+   font-size: 20px;
+   line-height: 23px;
+}
+
+h5 {
+   font-size: 15px;
+   line-height: 17px;
+}
+
+h6 {
+   font-size: 20px;
+   line-height: 23px;
+   color: #545454;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   background: url(/src/img/back/noise_transparent@2x.png);
+}
+
+//!Header
+
+@import "header.scss";
+
+//!Burger
+
+@import "burger.scss";
+
+//!main
+
+.main {
+   flex: 1 1 auto;
+}
+
+//! not only
+
+.not-only {
+   &__container {
+      display: flex;
+      background-image: linear-gradient(to right, #5b483a, #262425);
+   }
+   &__img {
+      padding: 180px 0px 0px 0px;
+      flex: 0 1 52%;
+      position: relative;
+      z-index: 2;
+      img {
+         max-width: 100%;
+      }
+   }
+   &__button {
+      margin: 42px 0px 0px 0px;
+   }
+}
+.not-only {
+   &__text {
+      padding: 343px 0px 0px 0px;
+      p {
+         margin: 42px 0px 0px 0px;
+         display: inline-block;
+         max-width: 460px;
+         font-size: 15px;
+         color: #cdcdcd;
+         line-height: 24px;
+      }
+   }
+}
+.button {
+   display: inline-block;
+   padding: 15px 45px;
+   border-radius: 100px;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 1.4rem;
+   background-color: #f1cdb3;
+   transition: all 0.3s ease 0s;
+   &:hover {
+      background-color: #544338;
+      border: 1px solid #f1cdb3;
+      a {
+         color: #f3f3f3;
+      }
+   }
+   a {
+      color: #292929;
+   }
+}
+
+//! About
+
+.about {
+   &_text {
+      max-width: 430px;
+      min-height: 380px;
+      margin: 94px 175px 0px 0px;
+      h3 {
+         display: inline-block;
+         max-width: 320px;
+      }
+      p {
+         margin: 25px 0px 0px 0px;
+         text-indent: 5px;
+         color: #4c4c4c;
+         font-size: 15px;
+         line-height: 24px;
+      }
+   }
+
+   &__container {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__img {
+      margin: 80px 0px 100px 175px;
+      max-width: 300px;
+      height: auto;
+   }
+}
+
+//! Pets
+
+.friends {
+   &__container {
+      padding: 80px 0px 100px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f6f6f6;
+      h3 {
+         display: inline-block;
+         max-width: 400px;
+         text-align: center;
+      }
+   }
+   &__button {
+      margin: 60px 0px 0px 0px;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         color: #f6f6f6;
+      }
+   }
+}
+
+/*min friends slider*/
+
+.min-friends-slider {
+   margin: 30px 0px 0px 0px;
+   display: none;
+}
+
+.min-friends-slider-buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 120px;
+   margin: 0px auto;
+}
+
+/*med friends slider*/
+
+.med-friends-slider {
+   margin: 60px 0px 0px 0px;
+   display: none;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   width: 100%;
+}
+
+/*friends slider*/
+
+.friends-slider {
+   margin: 60px 0px 0px 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   width: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+   border: 1px solid #f1cdb3;
+   border-radius: 100%;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.3s ease 0s;
+   &:hover {
+      background: #f1cdb3;
+   }
+}
+
+.left-arrow {
+   transform: rotate(180deg);
+}
+
+.friends-slider-card {
+   border-radius: 15px;
+   padding: 0px 0px 30px 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: #fafafa;
+   h6 {
+      margin: 30px 0px 0px 0px;
+   }
+   &-button {
+      margin: 30px 0px 0px 0px;
+      display: inline-block;
+      padding: 15px 45px;
+      border-radius: 100px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 1.4rem;
+      border: 1px solid #f1cdb3;
+      color: #292929;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background: #f1cdb3;
+      }
+   }
+   &:hover {
+      box-shadow: 5px 5px 5px 5px rgba(34, 60, 80, 0.6);
+   }
+}
+
+.friends__button {
+   color: #292929;
+}
+
+//! Help
+
+.help {
+   &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+      padding: 25px 87px 100px 87px;
+      h3 {
+         display: inline-block;
+         max-width: 350px;
+         text-align: center;
+      }
+   }
+
+   &-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 60px 0px 0px 0px;
+      max-width: 1026px;
+      width: 100%;
+      min-height: 281px;
+      text-align: center;
+   }
+
+   &__item {
+      margin: 55px 10px 0px 15px;
+      width: 175px;
+      display: inline-block;
+   }
+
+   &__icon {
+      margin: 0px auto;
+      width: 60px;
+      height: 60px;
+   }
+
+   &__text {
+      margin: 30px 0px 0px 0px;
+   }
+}
+
+//! In addition
+
+.in-addition {
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 181px 100px 183px;
+      background: #f6f6f6;
+   }
+   &__img {
+      margin: 88px 0px 0px 0px;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__text {
+      margin: 78px 0px 0px 0px;
+      max-width: 380px;
+      h3 {
+         display: inline-block;
+         max-width: 300px;
+      }
+      h5 {
+         margin: 19px 0px 0px 0px;
+      }
+      h4 {
+         display: inline-block;
+         text-align: center;
+         margin: 20px 0px 0px 0px;
+         padding: 10px 15px;
+         background-color: #f1cdb3;
+         border-radius: 9px;
+         transition: all 0.3s ease 0s;
+         &:hover {
+            background: rgb(207, 193, 136);
+         }
+         span {
+            margin: 0px 15px 0px 0px;
+         }
+      }
+      p {
+         margin: 20px 0px 0px 0px;
+         color: #949191;
+         line-height: 18px;
+         text-indent: 5px;
+      }
+   }
+}
+
+//!FOOTER
+
+@import "footer.scss";
+
+//! Pets
+
+@import "pets.scss";
+
+//!adaptive
+
+@import "responsive";

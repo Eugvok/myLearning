@@ -1,0 +1,136 @@
+/*PET*/
+
+/*Header*/
+
+.header {
+   padding: 54px 0px 0px 0px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   width: 100%;
+}
+.pets-header {
+   &__container {
+      display: flex;
+      align-items: center;
+      min-height: 5rem;
+   }
+
+   &__logo {
+      h1 {
+         color: #545454;
+         &:hover {
+            color: #f8f8f8;
+            text-shadow: rgb(0, 0, 0) 1px 0 3px;
+         }
+      }
+      font-size: 13.7px;
+      color: #ffffff;
+      line-height: 12px;
+      letter-spacing: 0.98px;
+      a {
+         color: #292929;
+         transition: all 0.3s ease 0s;
+         &:hover {
+            color: #f8f8f8;
+            text-shadow: rgb(0, 0, 0) 1px 0 3px;
+         }
+      }
+   }
+}
+.menu {
+   flex: 1 1 auto;
+   &__item {
+      margin: 0px 0px 0px 35px;
+      .active {
+         pointer-events: none;
+         cursor: default;
+         border-bottom: 3px solid #f1cdb3;
+      }
+   }
+}
+.pets-menu {
+   display: flex;
+   justify-content: flex-end;
+
+   &__list {
+      display: flex;
+      padding: 0px 0px 4px 0px;
+      .menu__item {
+         a {
+            color: #545454;
+            transition: all 0.3s ease 0s;
+            &:hover {
+               color: #292929;
+            }
+         }
+         .active {
+            color: #292929;
+         }
+      }
+   }
+}
+
+/*our-friends*/
+
+.our {
+   margin: 120px 0px 0px 0px;
+   &__container {
+      padding: 80px 0px 0px 0px;
+      background: #f6f6f6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+         display: inline-block;
+         width: 500px;
+         text-align: center;
+      }
+   }
+}
+.our-slider {
+   margin: 45px 0px 0px 0px;
+   padding: 15px 38px 0px 38px;
+   width: 100%;
+   min-height: 930px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   &__box-item {
+      display: inline-block;
+      margin: 0px 0px 30px 0px;
+   }
+}
+.our-slider-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   img {
+      width: 270px;
+      height: 270px;
+   }
+   h6 {
+      margin: 30px 0px 0px 0px;
+   }
+   span {
+      margin: 30px 0px;
+      display: inline-block;
+      padding: 15px 45px;
+      border-radius: 100px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 1.2rem;
+      border: 2px solid #f1cdb3;
+      color: #292929;
+      &:hover {
+         border: 2px solid #8a5b3a;
+         background: #f1cdb3;
+      }
+   }
+}
+.our-slider-buttons {
+   margin: 45px 0px 96px 0px;
+   width: 342px;
+   height: 54px;
+   display: inline-block;
+}

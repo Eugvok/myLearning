@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Container*/
+.bayan_container {
+	background-color: coral;
+	max-width: 50%;
+	margin: 20px auto;
+}
+
+h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+	display: block;
+	padding: 10px 20px;
+}
+
+.bar {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	/*  font-size: 20px; */
+	color: wheat;
+	display: block;
+	/* cursor: pointer; */
+	position: relative;
+	padding: 10px 20px;
+	transition: color 1s linear 0.1s;
+	border-top: 1px solid gray;
+}
+
+.radio_button {
+	position: absolute;
+	width: 0;
+	height: 0;
+	appearance: none;
+}
+
+.radio_button:checked~.hidden_image {
+	display: block;
+}
+
+.radio_button:checked~span[id*="cat"] {
+	display: inline;
+	color: black;
+}
+
+.radio_button:checked~span[id*="paw"] {
+	display: none;
+}
+
+.radio_button:checked~.bar {
+	color: black;
+}
+
+/* Hover over radio */
+.radio_button:hover~.hidden_image {
+	display: block;
+}
+
+/* .radio_button:hover ~ span[id*="cat"] {
+	display: inline;
+	color: black;
+ }
+ .radio_button:hover ~ span[id*="paw"] {
+	display: none;
+ } */
+
+.item:hover span[id$="paw"] {
+	display: none;
+}
+
+.item:hover span[id*="cat"] {
+	display: inline;
+	color: black;
+}
+
+/* Hover over container */
+
+.bayan_container:hover .bar {
+	color: black;
+}
+
+.bayan_container:hover span[id$="paw"] {
+	display: inline;
+	color: black;
+}
+
+.hidden_image {
+	display: none;
+	background-color: coral;
+}
+
+span[id*="span_"] {
+	display: none;
+	float: right;
+}
+
+img {
+	display: block;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
